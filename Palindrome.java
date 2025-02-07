@@ -2,28 +2,28 @@ import java.util.Scanner;
 
 public class Palindrome {
 
-    // Đếm số từ trong chuỗi
+    // Count the number of words in a string
     public static int DoDaiChuoi(String str) {
         return str.split("\\s+").length;
     }
 
-    // Đếm tổng số ký tự trong chuỗi (bao gồm khoảng trắng)
+    // Count the total number of characters in a string (including spaces)
     public static int DemTu(String str) {
         return str.replaceAll("\\s+", "").length();
     }
 
-    // Nối hai chuỗi lại với nhau
+    // Concatenate two strings
     public static String NoiChuoi(String str1, String str2) {
         return str1 + " " + str2;
     }
 
-    // Kiểm tra chuỗi có phải Palindrome không
+    // Check if a string is a Palindrome
     public static void KiemTraChuoiDoiXung(String str) {
         String s1 = str.replaceAll("\\s+", "").toLowerCase();
         String s2 = new StringBuilder(cleanedStr).reverse().toString();
 
         if (s1.equals(s2)) {
-            System.out.println("Đây là chuổi đối xứng");
+            System.out.println("This is a Palindrome string");
         } else {
             System.out.println("This string is not a Palindrome");
         }
