@@ -19,8 +19,8 @@ public class Palindrome {
 
     // Check if a string is a Palindrome
     public static void checkPalindrome(String str) {
-        String s1 = str.replaceAll("\\s+", "").toLowerCase();
-        String s2 = new StringBuilder(s1).reverse().toString(); // Fixed variable name
+        String cleanedStr = str.replaceAll("\\s+", "").toLowerCase();
+        String reversedStr = new StringBuilder(s1).reverse().toString(); 
 
         if (s1.equals(s2)) {
             System.out.println("This is a Palindrome string");
@@ -31,21 +31,21 @@ public class Palindrome {
 
 
     public static void main(String[] args) {
-        Scanner SC = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter your string: ");
-        String str = SC.nextLine().trim();
+        String str = sc.nextLine().trim();
 
         System.out.println("The number of words in the string is: " + countWords(str));
         System.out.println("The number of characters in the string (excluding spaces) is: " + countCharacters(str));
         checkPalindrome(str);
 
         System.out.println("Enter your first string to concatenate: ");
-        String str1 = SC.nextLine().trim();
+        String str1 = sc.nextLine().trim();
         System.out.println("Enter your second string to concatenate: ");
-        String str2 = SC.nextLine().trim();
+        String str2 = sc.nextLine().trim();
         System.out.println("The concatenated string is: " + concatenateStrings(str1, str2));
 
-        SC.close();
+        sc.close();
     }
 }
