@@ -20,9 +20,9 @@ public class Palindrome {
     // Check if a string is a Palindrome
     public static void checkPalindrome(String str) {
         String cleanedStr = str.replaceAll("\\s+", "").toLowerCase();
-        String reversedStr = new StringBuilder(s1).reverse().toString(); 
+        String reversedStr = new StringBuilder(cleanedStr).reverse().toString(); 
 
-        if (s1.equals(s2)) {
+        if (cleanedStr.equals(reversedStr)) {
             System.out.println("This is a Palindrome string");
         } else {
             System.out.println("This string is not a Palindrome");
